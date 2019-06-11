@@ -1,0 +1,24 @@
+<!-- Inherits from base template -->
+{% extends "home_page/base.html" %}
+{% block content %}
+	<div class="content-section">
+		<form method="POST">
+			<!-- csrf token -->
+			{% csrf_token %}
+			<fieldset class="form-group">
+				<legend class="border-bottom mb-4"><strong style="color:red">
+					Warning! You are about to delete the event: </strong> <em>{{object.module_title}}</em>
+				</legend>
+				<h2> Clicking 'Yes' will result in the deletion of this event. Continue? </h2>
+				<!-- rendering form using crispy_forms styling -->
+			</fieldset>
+			<div class="form-group">
+				<button class="btn btn-outline-danger" type="submit"> 
+				Yes 
+				</button>
+				<a class="btn btn-outline-secondary" href="{% url 'todo' %}"> 
+				Cancel
+				</a>	
+			</div>
+		</form>
+{% endblock content %}

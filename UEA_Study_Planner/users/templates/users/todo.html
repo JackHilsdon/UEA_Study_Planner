@@ -1,0 +1,17 @@
+{% extends "home_page/base.html" %}
+{% block content %}
+    <button class="btn-outline-secondary mb-4"<a href="{% url 'todo_create' %}">Create New Event</a></button>
+    <button class="btn-outline-secondary mb-4"><a href="{% url 'semester_upload' %}">Upload Your Semester File</a></button>
+    {% for todo in posts %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+                <h2><a class="article-title" href="{% url 'todo_detail' todo.id %}">
+            	<u>{{ todo.module_title }}</u>
+                </a></h2>
+                <a class="text-center"><b>Topic: </b>{{ todo.topic }}</a>
+            </div>
+            <p class="article-content">{{ todo.notes }}</p>
+        </article>
+    {% endfor %}
+{% endblock content %}

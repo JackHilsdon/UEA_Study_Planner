@@ -1,0 +1,26 @@
+{% extends "home_page/base.html" %}
+{% block content %}
+    <a href="{% url 'todo' %}"> Go Back To To Do List </a>
+    <article class="media content-section">
+      <div class="media-body">
+        <div class="article-metadata">
+        <h2 class="article-title">
+        	<u>{{ object.module_title }}</u>
+        </h2>
+          <a class="text-center"><b>Topic: </b>{{ object.topic }}</a>
+        </div>
+        <p class="article-content">{{ object.notes }}</p>
+        <small class="text-muted">
+        Created on:  {{ object.date_created|date:"d F, Y, P" }}
+    	</small>
+        <div class="form-group">
+            <a class="btn btn-outline-primary" href="{% url 'todo_delete' todo.id %}">
+            Mark Event As Complete 
+            </a>
+            </button>
+            <a class="btn btn-outline-secondary" href="{% url 'todo_update' todo.id %}"> 
+            Update This Event
+            </a>    
+        </div>
+    </article>
+{% endblock content %}

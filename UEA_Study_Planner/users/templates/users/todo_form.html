@@ -8,21 +8,18 @@
 			{% csrf_token %}
 			<fieldset class="form-group">
 				<legend class="border-bottom mb-4">
-					Join Now!
+					Create A To Do Item
 				</legend>
 				<!-- rendering form using crispy_forms styling -->
 				{{ form|crispy }}
 			</fieldset>
 			<div class="form-group">
 				<button class="btn btn-outline-info" type="submit"> 
-				Sign Up Here 
-				</button>	
+				Submit 
+				</button>
+				<a class="btn btn-outline-secondary" href="{% url 'todo' %}"> 
+				Cancel
+				</a>	
 			</div>
 		</form>
-		<div class="border-top pt-3">
-			<small class="text-muted">
-				Already Have An Account? <a class="ml-2" href="{% url 'login' %}"> Sign In</a>
-			</small>
-		</div>
-	</div>
 {% endblock content %}

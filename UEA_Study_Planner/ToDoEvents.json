@@ -1,0 +1,50 @@
+[
+	{
+		"module_title": "Software Engineering",
+		"topic": "Django",
+		"notes": "Creating a UEA Study Planner",
+		"user_id": 1
+	},
+	{
+		"module_title": "Networks",
+		"topic": "Cybersecurity",
+		"notes": "Learn about how a firewall works",
+		"user_id": 1
+	},
+	{
+		"module_title": "Programming",
+		"topic": "Java",
+		"notes": "Learn for loops",
+		"user_id": 1
+	},
+	{
+		"module_title": "Data Structures and Algorithms",
+		"topic": "DSA",
+		"notes": "Learn about HashSets",
+		"user_id": 1
+	},
+	{
+		"module_title": "Swimming",
+		"topic": "UEA Swimming Pool",
+		"notes": "Swim for an hour with Jeff",
+		"user_id": 1
+	},
+	{
+		"module_title": "Make Dinner",
+		"topic": "Food",
+		"notes": "Make pasta",
+		"user_id": 1
+	},
+	{
+		"module_title": "Arch and OS",
+		"topic": "Pipelining",
+		"notes": "Understand how pipelining works",
+		"user_id": 1
+	},
+	{
+		"module_title": "Sleep",
+		"topic": "Go to bed",
+		"notes": "zzzzzzzz",
+		"user_id": 1
+	}
+	]

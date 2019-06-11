@@ -1,0 +1,24 @@
+{% extends "home_page/base.html" %}
+{% block content %}
+{{order}}
+{% if messages %}
+	{% for message in messages %}
+		<div>
+			<strong>{{message|safe}}</strong>
+		</div>
+	{% endfor %}
+{% else %}
+{{incorrect}}
+<form method="post" enctype="multipart/form-data">
+	{% csrf_token %}
+	<label> Please upload your semester file! </label>
+	<input type="file" name="file">
+	<div>
+	<small>Note: Only accepts CSV Files </small>
+	</div>
+	<button type="submit"> Upload </button>
+	{{success}}
+</form>
+{% endif %}
+<a href="{% url 'todo' %}"> Click here to go back to To Do List </a>
+{% endblock %}

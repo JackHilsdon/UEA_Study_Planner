@@ -24,7 +24,7 @@
 <body>
     <!-- Navigation bar here -->
 	<header class="site-header">
-	  <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+	  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" style="background-color: #20AA32">
 	    <div class="container">
 	      <a class="navbar-brand mr-4" href="/">UEA Study Planner</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,16 +34,15 @@
 	        <div class="navbar-nav mr-auto">
 	          <a class="nav-item nav-link" href="{% url 'home_page' %}">Home</a>
 	          <a class="nav-item nav-link" href="{% url 'about_page' %}">About</a>
-	          <!-- Only authenticated users have access to the Calendar -->
+	          <!-- Only authenticated users have access to the To Do List -->
 	          {% if user.is_authenticated %}
-	          <a class="nav-item nav-link" href="#">Calendar</a>
+	          <a class="nav-item nav-link" href="{% url 'todo' %}">To Do List</a>
 	          {% endif %}
 	        </div>
 	        <!-- Navbar Right Side -->
 	        <div class="navbar-nav">
 	        	<!--If user is currently signed in, then show only the link to logout -->
 	        	{% if user.is_authenticated %}
-	        		<a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
 	        		<a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
 	        	{% else %}
 	        	<!-- Else, show links to both login and register -->
