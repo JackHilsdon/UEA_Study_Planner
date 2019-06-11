@@ -1,0 +1,10 @@
+<!-- Inherits from base template -->
+{% extends "home_page/base.html" %}
+{% block content %}	
+	<h2 class="text-center"> You have been logged out! </h2>
+		<div class="text-center border-top pt-3">
+			<small class="text-muted text-center">
+				Would you like to login again? <a class="font-italic" href="{% url 'login' %}"> Sign In Here </a>
+			</small>
+		</div>
+{% endblock content %}
